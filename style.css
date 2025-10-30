@@ -214,121 +214,76 @@ body {
     z-index: 50;
   }
   
-  /* ======= RESPONSIVE ======= */
-  @media (max-width: 600px) {
-    .encabezado {
-      height: 180px;
-    }
-    .encabezado h1 {
-      font-size: 2em;
-      padding: 0 15px;
-    }
-    .menu a {
-      margin: 5px 10px;
-      font-size: 0.95em;
-    }
-    .cancion {
-      width: 160px;
-    }
-    .tarjeta img {
-      width: 180px;
-      height: 180px;
-    }
-    table {
-      font-size: 0.9em;
-    }
-  }
-  
-  @media (max-width: 600) {
-    .encabezado {
-      height: 150px;
-    }
-    .encabezado h1 {
-      font-size: 1.6em;
-    }
-    .menu {
-      flex-direction: column;
-    }
-    .menu a {
-      margin: 5px 0;
-    }
-    .cancion, .tarjeta img {
-      width: 140px;
-      height: auto;
-    }
-    .match div {
-      width: 90%;
-    }
-    footer {
-      font-size: 0.8em;
-    }
-  }
-  
   .bracket {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 30px;
     padding: 30px;
   }
   
-  /* Cada ronda (Octavos, Cuartos, etc.) */
-  .ronda {
-    text-align: center;
-    margin-bottom: 40px;
+  .round {
+    background-color: #d9e7ff;
+    border: 2px solid #002b6b;
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px; /* Limita el ancho total */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Cada enfrentamiento */
+  .round h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #072544;
+  }
+  
   .match {
     display: flex;
-    flex-direction: column; /* En PC: uno debajo del otro */
     align-items: center;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 12px;
-    padding: 15px;
-    width: 260px;
-    margin: 10px auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  }
-  
-  /* Equipos */
-  .team {
-    background: white;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 15px;
     width: 100%;
-    text-align: center;
-    padding: 8px;
-    margin: 5px 0;
-    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .team {
+    background-color: white;
+    padding: 8px 15px;
+    border-radius: 10px;
     font-weight: 500;
+    text-align: center;
+    flex: 1;
   }
   
-  /* Texto VS (oculto por defecto) */
   .vs {
-    display: none;
+    font-weight: bold;
+    margin: 0 10px;
+    color: #002b6b;
   }
   
-  /* ======= RESPONSIVE (cara a cara y centrado) ======= */
+  /* RESPONSIVE: se mantiene centrado en pantallas pequeñas */
   @media (max-width: 600px) {
+    .round {
+      width: 95%;
+    }
+  
     .match {
-      flex-direction: row;       /* Lado a lado */
-      justify-content: center;   /* Centrado en el medio */
-      align-items: center;       
-      gap: 10px;
-      width: 100%;
-      max-width: 330px;
-      padding: 10px 15px;
+      flex-direction: row;
+      justify-content: center;
+      gap: 8px;
     }
   
     .team {
-      width: 45%;
-      margin: 0;
-      text-align: center;
+      padding: 6px 10px;
+      font-size: 14px;
     }
   
     .vs {
-      display: inline-block;
-      font-weight: bold;
-      color: #072544;
+      font-size: 14px;
     }
   }
+  
   
