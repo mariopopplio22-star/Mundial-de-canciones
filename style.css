@@ -1,0 +1,266 @@
+/* ======= GENERAL ======= */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #eaf3ff;
+    color: #072544;
+  }
+  
+  /* ======= ENCABEZADO ======= */
+  .encabezado {
+    position: relative;
+    height: 250px;
+    background: url('imgfondo-musica.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .encabezado::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  .encabezado h1 {
+    position: relative;
+    color: white;
+    font-size: 3em;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+    z-index: 1;
+    text-align: center;
+  }
+  
+  /* ======= MENÚ ======= */
+  .menu {
+    background-color: #003366;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .menu a {
+    color: white;
+    margin: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  .menu a:hover {
+    color: #a7c8ff;
+  }
+  
+  /* ======= CONTENIDOS ======= */
+  h2 {
+    text-align: center;
+    color: #002a5a;
+    margin-top: 30px;
+  }
+  
+  /* ======= CANCIONES INDEX ======= */
+  .lista-canciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 30px;
+  }
+  .cancion {
+    background: #d5e6ff;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 220px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+  .autor {
+    font-size: 0.9em;
+    color: #333;
+  }
+  
+  /* ======= PARTICIPANTES ======= */
+  .galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+  }
+  .tarjeta {
+    background: #dce9f8;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform 0.3s;
+    text-align: center;
+  }
+  .tarjeta img {
+    width: 220px;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  .tarjeta:hover {
+    transform: scale(1.1);
+  }
+  
+  /* ======= FASE DE GRUPOS ======= */
+  .tabla-grupo {
+    margin: 30px auto;
+    text-align: center;
+    width: 90%;
+    max-width: 900px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(to bottom, #ffffff, #dce9f8);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  th {
+    background-color: #003366;
+    color: white;
+    padding: 12px;
+    text-transform: uppercase;
+  }
+  td {
+    border: 1px solid #003366;
+    padding: 10px;
+  }
+  .clasificado {
+    background-color: #b3f7b3;
+  }
+  .eliminado {
+    background-color: #f7b3b3;
+  }
+  
+  /* ======= ELIMINATORIAS ======= */
+  .bracket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+  }
+  .ronda {
+    border: 2px solid #003366;
+    border-radius: 10px;
+    width: 85%;
+    max-width: 900px;
+    padding: 15px;
+    background: #cde1f9;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  }
+  .ronda h3 {
+    text-align: center;
+    color: #002a5a;
+  }
+  .match {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    gap: 10px;
+  }
+  .match div {
+    width: 40%;
+    min-width: 150px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  .ganador {
+    border: 2px solid #2e8b57;
+  }
+  .eliminado {
+    opacity: 0.4;
+  }
+  
+  /* ======= FLECHA ======= */
+  .flecha {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  /* ======= ESPACIADO GENERAL ======= */
+  main, .contenido, .lista-canciones, .galeria, .tabla-grupo, .bracket {
+    padding-bottom: 90px;
+  }
+  
+  /* ======= FOOTER FIJO ======= */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #002244;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+    z-index: 50;
+  }
+  
+  /* ======= RESPONSIVE ======= */
+  @media (max-width: 768px) {
+    .encabezado {
+      height: 180px;
+    }
+    .encabezado h1 {
+      font-size: 2em;
+      padding: 0 15px;
+    }
+    .menu a {
+      margin: 5px 10px;
+      font-size: 0.95em;
+    }
+    .cancion {
+      width: 160px;
+    }
+    .tarjeta img {
+      width: 180px;
+      height: 180px;
+    }
+    table {
+      font-size: 0.9em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .encabezado {
+      height: 150px;
+    }
+    .encabezado h1 {
+      font-size: 1.6em;
+    }
+    .menu {
+      flex-direction: column;
+    }
+    .menu a {
+      margin: 5px 0;
+    }
+    .cancion, .tarjeta img {
+      width: 140px;
+      height: auto;
+    }
+    .match div {
+      width: 90%;
+    }
+    footer {
+      font-size: 0.8em;
+    }
+  }
+  
