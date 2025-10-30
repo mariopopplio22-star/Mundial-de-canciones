@@ -149,7 +149,7 @@ body {
   .ronda {
     border: 2px solid #003366;
     border-radius: 10px;
-    width: 96%;
+    width: 85%;
     max-width: 900px;
     padding: 15px;
     background: #cde1f9;
@@ -261,6 +261,74 @@ body {
     }
     footer {
       font-size: 0.8em;
+    }
+  }
+  
+  .bracket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+  }
+  
+  /* Cada ronda (Octavos, Cuartos, etc.) */
+  .ronda {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  /* Cada enfrentamiento */
+  .match {
+    display: flex;
+    flex-direction: column; /* En PC: uno debajo del otro */
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 15px;
+    width: 260px;
+    margin: 10px auto;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  /* Equipos */
+  .team {
+    background: white;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  /* Texto VS (oculto por defecto) */
+  .vs {
+    display: none;
+  }
+  
+  /* ======= RESPONSIVE (cara a cara y centrado) ======= */
+  @media (max-width: 600px) {
+    .match {
+      flex-direction: row;       /* Lado a lado */
+      justify-content: center;   /* Centrado en el medio */
+      align-items: center;       
+      gap: 10px;
+      width: 100%;
+      max-width: 330px;
+      padding: 10px 15px;
+    }
+  
+    .team {
+      width: 45%;
+      margin: 0;
+      text-align: center;
+    }
+  
+    .vs {
+      display: inline-block;
+      font-weight: bold;
+      color: #072544;
     }
   }
   
