@@ -145,6 +145,8 @@ body {
     align-items: center;
     gap: 30px;
     padding: 30px;
+    padding-bottom: 120px; /* Espacio extra para que el footer no tape nada */
+    box-sizing: border-box;
   }
   .ronda {
     border: 2px solid #003366;
@@ -195,7 +197,7 @@ body {
   }
   
   /* ======= ESPACIADO GENERAL ======= */
-  main, .contenido, .lista-canciones, .galeria, .tabla-grupo, .bracket {
+  main, .contenido, .lista-canciones, .galeria, .tabla-grupo, .bracket{
     padding-bottom: 90px;
   }
   
@@ -219,6 +221,8 @@ body {
     justify-content: center;
     align-items: center;
     padding: 30px;
+    padding-bottom: 120px; /* Espacio extra para que el footer no tape nada */
+    box-sizing: border-box;
   }
   
   .round {
